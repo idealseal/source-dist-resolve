@@ -1,0 +1,17 @@
+[project]
+name = "foo"
+version = "0.1.0"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = ["pydantic==2.10.6", "pydantic-core==2.27.2"]
+
+[project.scripts]
+foo = "foo:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv.sources]
+pydantic = { path = "src/foo/pydantic" }
+pydantic-core = { path = "src/foo/pydantic-core" }
